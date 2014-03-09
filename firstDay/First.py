@@ -11,8 +11,11 @@ def index():
     + '<a href="/hello">hello world page!</a><br>' \
     + '<a href="/hello/ASDF">string hello world page!</a><br>' \
     + '<a href="/hello/123">int hello world page!</a><br>' \
-    + '<a href="/hello/1.344">float hello world page!</a><br>'
-
+    + '<a href="/hello/1.344">float hello world page!</a><br>' 
+    
+@app.route('/secondDay')
+def page():
+	return render_template('secondDay.py')
 @app.route('/hello')
 def hello_world(name=None):
     return render_template('hello.html', name=name)
